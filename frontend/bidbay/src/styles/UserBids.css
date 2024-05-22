@@ -1,0 +1,149 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+/* User Bids Container */
+.user-bids-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* User Bid Card */
+.user-bid-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-bid-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Bid Image */
+.bid-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.user-bid-card:hover .bid-image {
+  transform: scale(1.05);
+}
+
+/* Bid Details */
+.bid-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bid-name {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.bid-amount {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.check-auction-link {
+  text-align: right;
+  margin-top: auto;
+}
+
+.check-auction-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.check-auction-link a:hover {
+  color: #0056b3;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #666;
+}
+
+/* Button Styles */
+button {
+  background-color: #007bff;
+  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Form Styles */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-bids-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .bid-image {
+    height: 150px;
+  }
+}

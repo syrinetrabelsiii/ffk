@@ -1,0 +1,83 @@
+/* About Section */
+.about {
+  display: flex; /* Fixed typo 'felx' to 'flex' */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 60px 20px;
+  height: calc(100vh - 60px);
+  background: linear-gradient(135deg, #f0f0f0, #d4d4d4);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-title h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 700;
+  animation: fadeInUp 1s ease forwards;
+  letter-spacing: 1px;
+}
+
+.about-title p {
+  font-size: 1.25rem;
+  color: #666;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add some hover effects to make it more interactive */
+.about-title h1:hover,
+.about-title p:hover {
+  color: #B923E1;
+  transition: color 0.3s ease;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 768px) {
+  .about {
+    margin: 40px 10px;
+    padding: 30px;
+  }
+
+  .about-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-title p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title h1 {
+    font-size: 2rem;
+  }
+
+  .about-title p {
+    font-size: 0.9rem;
+  }
+}
